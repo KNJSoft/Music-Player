@@ -1,9 +1,11 @@
 package com.knjsoft.musicplayer
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
@@ -27,6 +29,12 @@ class MainActivity : AppCompatActivity() {
             return
         }else{
             getson()
+        }
+        listeview.onItemClickListener=AdapterView.OnItemClickListener{ adapterview,view,position,id ->
+            Intent(this@MainActivity,Lecteur::class.java).also {
+                startActivity(it)
+            }
+
         }
     }
 
