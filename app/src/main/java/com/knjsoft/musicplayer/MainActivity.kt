@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         }
         listeview.onItemClickListener=AdapterView.OnItemClickListener{ adapterview,view,position,id ->
             Intent(this@MainActivity,Lecteur::class.java).also {
+                val sons=listson[position]
+                it.putExtra("son",sons)
                 startActivity(it)
             }
 
@@ -60,9 +62,12 @@ class MainActivity : AppCompatActivity() {
             val indexmusic=soncursor.getColumnIndex(MediaStore.Audio.Media.IS_MUSIC)
             do {
                 val titre=soncursor.getString(indextitre)
-                val auteur=soncursor.getString(indexauteur)
+                var auteur=soncursor.getString(indexauteur)
                 val path=soncursor.getString(indexdata)
                 val music=soncursor.getInt(indexmusic)
+                if(auteur=="<unknown>"){
+                    auteur = "Inconnu"
+                }
                 if (music==1){
                     listson.add(Son(titre,auteur,path))
                 }

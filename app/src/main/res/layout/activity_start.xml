@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FC3C3C3C"
+    android:layout_gravity="center_horizontal"
+    tools:context=".Start">
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="M P"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="287dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="50dp"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Music Player"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="287dp"
+        tools:ignore="MissingConstraints"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
