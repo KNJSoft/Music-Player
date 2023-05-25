@@ -36,10 +36,8 @@ class MainActivity : AppCompatActivity() {
                 it.putExtra("son",sons)
                 startActivity(it)
             }
-
         }
     }
-
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
